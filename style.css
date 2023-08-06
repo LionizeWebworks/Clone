@@ -6,28 +6,37 @@
 
 
 @font-face {
-    font-family: 'Neopets';
+    font-family: 'Cbold';
     src: url("fonts/Cafeteria-Bold.otf");
+    font-family: 'Cblack';
+    src: url("fonts/Cafeteria-Black.otf");
  }
 
+ @font-face {
+  font-family: 'clock';
+  src: url("fonts/MuseoSansRounded-700.otf");
+}
+
 :root {
-    --font: 'Neopets', 'Times New Roman', serif;
+    --font: 'Cblack', 'Times New Roman', serif;
     --bannerBg: #FED123;
-    --bannerBorder: #faa819;
+    --bannerBorder: #FAA819;
     --fontColor: #363636;
     --mainBorder: #9a6f26;
   }
 
   header {
+    position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
     width: 100%;
-    height: 75px;
+    height: 68px;
     background-color: var(--bannerBg);
     background-image: url("images/banner-stars.png");
-    background-size: contain;
+    background-size: 115px;
+    background-repeat: repeat;
+    background-position-x: 10px;
+    background-position-y: -5px;
     border-bottom: solid 3px var(--bannerBorder);
   }
 
@@ -37,8 +46,9 @@
 
   #profile-icon {
     margin-left: 10px;
-    height: 55px;
-    width: 55px;
+    margin-top: 3px;
+    height: 50px;
+    width: 50px;
     background-color: var(--bannerBorder);
     border-radius: 50%;
   }
@@ -48,31 +58,62 @@
     width: auto;
   }
 
-  #navlinks {
+  nav {
+    position: absolute;
+    right: 0%;
     display: flex;
-
-}
-
-#buttonBox {
-  display: flex;
-}
-
-.navbutton {
-display: flex;
-align-items: center;
-}
-
-  .navbutton img {
-    height: 55px;
+    align-items: center;
+    max-width: 100%;
+    height: 75px;
   }
 
+  nav div {
+    /* padding: 5px; */
+  }
 
-  #clock {
-    /* Adjust the height as needed */
-    height: 50px; /* for example */
-}
+    #buttonBox, #clock, #searchBell {
+      display: flex;
+      margin: 5px;
+    }
 
-#searchBell {
-    /* Adjust the width as needed */
-    width: auto;
-}
+    .navbutton {
+      display: flex;
+      align-items: center;
+      margin: 5px;
+      font-family: var(--font);
+      font-size: 23px;
+      color: var(--fontColor);
+    }
+
+    .navbutton img:not(.dropdown) {
+      height: 35px;
+      width: auto;
+      margin: 12px;
+    }
+
+    #clock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      height: 30px;
+      width: 140px;
+      background-color: #FFF7C5;
+      border: 2px solid var(--bannerBorder);
+      border-radius: 5px;
+      font-family: 'clock', Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      color: black;
+    }
+
+    #searchBell img {
+      height: 35px;
+      margin: 5px;
+    }
+
+    .dropdown {
+      height: 12px;
+      margin-left: 7px;
+      margin-right: 10px;
+    }
