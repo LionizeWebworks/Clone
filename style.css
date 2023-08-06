@@ -50,14 +50,29 @@
 
   #navlinks {
     display: flex;
+
+}
+
+#buttonBox {
+  display: flex;
 }
 
 .navbutton {
-    display: flex;
-    align-items: center;
-    font-family: var(--font);
-  }
+display: flex;
+align-items: center;
+}
 
   .navbutton img {
     height: 55px;
   }
+
+
+  #clock {
+    /* Adjust the height as needed */
+    height: 50px; /* for example */
+}
+
+#searchBell {
+    /* Adjust the width as needed */
+    width: auto;
+}
