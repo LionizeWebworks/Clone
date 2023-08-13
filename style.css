@@ -173,7 +173,39 @@
       padding: 4px;
     }
 
-    /*------------MAIN BOX -----------*/
+    /*------------CREATE A CLONE -----------*/
+
+    #main {
+      display: relative;
+      margin-top: 60px;
+    }
+
+    #speciesFlag {
+      position: absolute;
+      top: 21%;
+      left: 7%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      width: auto;
+      padding: 5px;
+      background-color: var(--background);
+      border-top: 3px solid var(--mainBorder);
+      border-left: 3px solid var(--mainBorder);
+      border-right: 3px solid var(--mainBorder);
+      border-radius: 10px;
+      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      color: #77541e;
+    }
+
+    #create {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: auto;
+    }
+        /*------------SECTION BANNER -----------*/
 
     #title {
       display: flex;
@@ -201,7 +233,46 @@
       color: var(--mainBorder);
     }
 
-        /*------------PET SELECTOR -----------*/
+        /*------------SPECIES -----------*/
+
+    #species {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      height: 500px;
+      margin-left: 15px;
+      background-color: var(--background);
+      border: 3px solid var(--mainBorder);
+      border-radius: 10px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .type {
+      height:86px;
+    }
+
+
+            /*------------CUSTOMIZE -----------*/
+
+    #info {
+      height: 400px;
+      margin-left: 25px;
+      margin-right: 25px;
+      background-color: var(--background);
+      border: 3px solid var(--mainBorder);
+      border-radius: 10px;
+    }
+
+            /*------------STATS -----------*/
+    #stats {
+      height: 400px;
+      margin-right: 40px;
+      background-color: var(--background);
+      border: 3px solid var(--mainBorder);
+      border-radius: 10px;
+    }
+
+
 
     /*------------FOOTER -----------*/
     footer {

@@ -6,6 +6,8 @@ You have probably noticed that my clone is not as identical as other website clo
 I did not at _any_ point cut and paste lines code from the original Neopets website. Every bit of HTML, CSS and Javascript functionality you see was
 completely handwritten by me through interaction, eyeballing and a WHOLE lot of tab cycling alone.
 
+_Note_ This is currently ONLY  a fullscreen clone. I will go back and add media queries at a later date. 
+
 I did not use Devtools to:
 *Find out what display or position values were being used
 *set my sizing for anything
