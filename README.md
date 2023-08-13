@@ -6,18 +6,21 @@ You have probably noticed that my clone is not as identical as other website clo
 I did not at _any_ point cut and paste lines code from the original Neopets website. Every bit of HTML, CSS and Javascript functionality you see was
 completely handwritten by me through interaction, eyeballing and a WHOLE lot of tab cycling alone.
 
-_Note_ This is currently ONLY  a fullscreen clone. I will go back and add media queries at a later date. 
+_Note_ This is currently ONLY  a fullscreen clone. I will go back and add media queries at a later date.
 
-I did not use Devtools to:
-*Find out what display or position values were being used
-*set my sizing for anything
-*name things (naming things is hard)
-*see how elements/containers were organized
-*execute functional interactivity
+I __did not__ use Devtools to:
+* Find out what display or position values were being used
+* Set my sizing for anything
+* Name things (naming things is hard)
+* See how elements/containers were organized
+* Write the Javascript Functionality
 
 I __did__ use Devtools to:
-*Get the hex values for colors.
-*Get links for images
+* Get the hex values for colors.
+* Get links for images
+* Get some spacing/sizing references
+* Save and use images, of course.
+* Find font names.
 
 
 ## Why did I do it this way?
