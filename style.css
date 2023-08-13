@@ -51,6 +51,7 @@
 
   #profile-icon {
     margin-left: 10px;
+    margin-right: 5px;
     margin-top: 3px;
     height: 50px;
     width: 50px;
@@ -174,9 +175,16 @@
 
     /*------------MAIN BOX -----------*/
 
-    title {
+    #title {
       display: flex;
-      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #title img {
+      position: absolute;
+      left: 40.5%;
+      height: 70px;
     }
 
     #createText {
@@ -184,7 +192,7 @@
       align-items: center;
       justify-content: center;
       height: 50px;
-      width: 200px;
+      width: 275px;
       background-color: var(--background);
       border: solid 3px var(--mainBorder);
       border-radius: 10px;
