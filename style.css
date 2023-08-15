@@ -240,6 +240,7 @@
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       height: 500px;
       margin-left: 15px;
+      padding: 10px;
       background-color: var(--background);
       border: 3px solid var(--mainBorder);
       border-radius: 10px;
@@ -247,7 +248,12 @@
       overflow-x: hidden;
     }
 
-    .type {
+    .pet {
+      height: 100px;
+      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+    }
+
+    .breed {
       height:86px;
     }
 
