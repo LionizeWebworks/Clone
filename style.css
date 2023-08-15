@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'clock';
+  src: url("fonts/MuseoSansRounded500.otf");
+}
 
 @font-face {
-    font-family: 'Cbold';
-    src: url("fonts/Cafeteria-Bold.otf");
     font-family: 'Cblack';
     src: url("fonts/Cafeteria-Black.otf");
  }
 
  @font-face {
-  font-family: 'clock';
-  src: url("fonts/MuseoSansRounded-700.otf");
   font-family: 'copyright';
-  src: url("fonts/MuseoSansRounded-500.otf");
+  src: url("fonts/MuseoSans_500.otf");
 }
 
 :root {
@@ -25,9 +25,10 @@
     --bannerBorder: #FAA819;
     --fontColor: #363636;
     --mainBorder: #9a6f26;
+    --mainFont: 'Cblack', Arial, Helvetica, sans-serif;
   }
 
-    /*------------HEADER -----------*/
+    /*------------1: HEADER -----------*/
 
   header {
     position: fixed;
@@ -118,13 +119,15 @@
       margin-left: 8px;
     }
 
+    /*------------2: BODY -----------*/
+
     body {
       display: flex;
       justify-content: center;
       background-image: url("images/main-bg.png");
     }
 
-    #blue {
+    #blueBox {
       display: grid;
       grid-auto-rows: min-content;
       margin-top: 68px;
@@ -135,7 +138,7 @@
       offset-position: top 75px;
     }
 
-        /*------------MINI BOOKMARK/FUNDS BAR -----------*/
+        /*------------2a: MINI BOOKMARK/FUNDS BAR -----------*/
 
     #miniNav {
       display: flex;
@@ -165,7 +168,7 @@
       height: 32px;
       background-color: white;
       border-radius: 10px;
-      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+      font-family: var(--mainFont);
     }
 
     #neoPoints {
@@ -173,7 +176,7 @@
       padding: 4px;
     }
 
-    /*------------CREATE A CLONE -----------*/
+    /*------------3: CREATE A CLONE -----------*/
 
     #main {
       display: relative;
@@ -195,17 +198,17 @@
       border-left: 3px solid var(--mainBorder);
       border-right: 3px solid var(--mainBorder);
       border-radius: 10px;
-      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+      font-family: var(--mainFont);
       font-size: 18px;
       color: #77541e;
     }
 
     #create {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 33% 36% 31%;
       width: auto;
     }
-        /*------------SECTION BANNER -----------*/
+        /*------------3a: SECTION BANNER -----------*/
 
     #title {
       display: flex;
@@ -228,14 +231,14 @@
       background-color: var(--background);
       border: solid 3px var(--mainBorder);
       border-radius: 10px;
-      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+      font-family: var(--mainFont);
       font-size: 30px;
       color: var(--mainBorder);
     }
 
-        /*------------SPECIES -----------*/
+        /*------------3b: SPECIES -----------*/
 
-    #species {
+    #petSelect {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       height: 500px;
@@ -249,8 +252,11 @@
     }
 
     .pet {
+      margin: 10px 5px;
+      text-align: center;
       height: 100px;
-      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+      font-family: var(--mainFont);
+      color: var(--fontColor);
     }
 
     .breed {
@@ -258,18 +264,134 @@
     }
 
 
-            /*------------CUSTOMIZE -----------*/
+            /*------------3c: CUSTOMIZE -----------*/
 
     #info {
       height: 400px;
-      margin-left: 25px;
-      margin-right: 25px;
+      margin: 0 25px;
+    }
+
+    /*------------ PET PREVIEW -----------*/
+    #preview {
+      height: 200px;
+    }
+
+/*------------COLORS -----------*/
+
+    #color {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      width: 100%;
+      font-size: 0;
+    }
+
+    #color button {
+      margin: 0;
+      height: 28px;
+      width: 100%;
+      font-family: var(--mainFont);
+      font-size: 22px;
+    }
+
+    #yellow {
+      margin-right: 1px;
+      color: #7a5601;
+      background: linear-gradient(yellow, white 55%, yellow);
+      border: solid 2px #a16f09;
+    }
+
+    #blue {
+      margin-right: 1px;
+      color: #043a90;
+      background: linear-gradient(#3699fd, #9ccdff 55%, #3699fd);
+      border: solid 2px #043a90;
+    }
+
+    #green {
+      margin-right: 1px;
+      color: #0f6605;
+      background: linear-gradient(#47df12, #85fc59 55%, #47df12);
+      border: solid 2px #0f6605;
+    }
+
+    #red {
+      color: #740604;
+      background: linear-gradient(#f84448, #ff7271 55%, #f84448);
+      border: solid 2px #740604;
+    }
+
+    /*------------PERSONALIZATIONS -----------*/
+    #nameGender {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 25px 0;
+      padding: 8px;
+      height: 120px;
       background-color: var(--background);
       border: 3px solid var(--mainBorder);
       border-radius: 10px;
     }
 
-            /*------------STATS -----------*/
+    #species {
+      font-family: 'clock', Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1.2;
+    }
+
+    #speciesName {
+      font-family: var(--mainFont);
+      font-size: 30px;
+    }
+
+    #nameForm {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      padding: 0 20px;
+      font-family: var(--mainFont);
+      font-size: 20px;
+      color: #363636;
+    }
+
+    #nameForm label {
+      margin: 2px;
+    }
+
+    #nameForm input, select {
+      height: 30px;
+      border-top: 3px solid #cccccc;
+      border-left: 3px solid #cccccc;
+      border-bottom: none;
+      border-right: none;
+      border-radius: 5px;
+    }
+
+    #nameForm input {
+      margin-right: 10px;
+      font-family: 'clock', Arial, Helvetica, sans-serif;
+    }
+
+    #nameForm option, select{
+      font-family: 'clock', Arial, Helvetica, sans-serif;
+    }
+
+    #bandannas {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      margin-top: 30px;
+      padding: 0px 10px;
+    }
+
+    #bandannas img {
+      height: 60px;
+    }
+
+
+            /*------------3d: STATS -----------*/
     #stats {
       height: 400px;
       margin-right: 40px;
@@ -329,7 +451,7 @@
     }
 
     .footerLink {
-      font-family: 'Cblack', Arial, Helvetica, sans-serif;
+      font-family: var(--mainFont);
       font-size: 22px;
       margin: 10px;
     }
